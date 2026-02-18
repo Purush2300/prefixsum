@@ -2,20 +2,16 @@ import java.util.HashMap;
 public class Hashmap {
     public static void main(String[] args) {
         HashMap<Integer, Integer >a=new HashMap<>();
-        int []b={1,2,3,4,5,5};
+       int[]b={1,2,3,4,1};
+       int total=5;
         for (int i = 0; i < b.length; i++) {
-           int n=b[i];
-            if(a.containsKey(n)){
-               int value= a.get(n);
-               a.put(n, value+1);
+            int res=total-b[i];
+            if(a.containsKey(res)){
+                System.out.println(a.get(res)+" "+i);
             }
-
-
-           else{
-            a.put(n, 1);
-           }
+            a.put(b[i],i);
         }
-        System.out.println(a);
+        
     }
     
 }
